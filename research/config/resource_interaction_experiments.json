@@ -1,0 +1,14 @@
+{
+  "stage": "07_resource_representation_experiments",
+  "contract_version": "resource_sums_v2",
+  "design_version": "four_way_interactions_v1",
+  "arms": ["RBW", "IB", "IW", "IBW"],
+  "progress": "scheduled_balls_remaining_estimate / 120",
+  "retain_original_resources": true,
+  "selection_metric": "validation_event_log_loss",
+  "tie_break": ["RBW", "IB", "IW", "IBW"],
+  "candidate_grid": "inherit frozen Stage 06",
+  "fit_scope": "train only",
+  "test_scored": false,
+  "downstream_activation": "requires separate Stage 08 migration"
+}

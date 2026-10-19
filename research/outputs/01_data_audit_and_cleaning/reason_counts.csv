@@ -1,0 +1,8 @@
+status,reason,matches
+excluded,adjusted_method,188
+excluded,awarded,4
+excluded,no_result,112
+excluded,outside_team_scope,3795
+excluded,reduced_or_nonstandard_overs,330
+excluded,super_over,48
+excluded,tie,51

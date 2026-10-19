@@ -1,0 +1,15 @@
+{
+  "stage": "09_nwc_attribution",
+  "contract_version": "resource_sums_v2_joint_selection_v1",
+  "main_model_policy": "four_cross_group_validation_selected_from_verified_stage08",
+  "target": "first_batting_team_win",
+  "probability_timing": "pre-event",
+  "within_innings": "observed_next_pre_event_interval",
+  "first_innings_boundary": "unallocated_last_event_plus_innings_transition",
+  "terminal": "audited_outcome_minus_final_pre_event_probability",
+  "allocation": "event_interval_participant_proxy_with_explicit_team_residuals",
+  "role_change_policy": "flag_only_not_automatic_exclusion",
+  "direct_dismissals": ["bowled", "lbw"],
+  "training_fits": 0,
+  "tolerance": 1e-10
+}

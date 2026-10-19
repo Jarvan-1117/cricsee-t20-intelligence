@@ -1,0 +1,15 @@
+{
+  "stage": "02_game_state_features",
+  "prediction_timing": "pre_delivery",
+  "target": "first_batting_team_win",
+  "recent_event_window": 10,
+  "team_form_half_life_matches": 10,
+  "team_rate_prior_wins": 1.0,
+  "team_rate_prior_losses": 1.0,
+  "history_scope": "Stage 01 included matches, strictly earlier dates, within gender",
+  "same_date_policy": "Read all snapshots before updating any result on that date",
+  "recent_form_same_date_policy": "Equal weight within date; decay older history by the number of matches",
+  "phase_over_boundaries": [6, 15],
+  "scheduled_overs": 20,
+  "balls_per_over": 6
+}

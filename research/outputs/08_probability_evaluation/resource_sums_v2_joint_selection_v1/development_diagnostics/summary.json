@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "diagnostic_id": "493c8a927ce6b4f884d0495912b1a9b7e245357867302deb5d91b8b4713c700b",
+  "selection_id": "31bd1c42bb6e0ec84f9824da5fe496de9fc7e0680f32c96bc2db445e30fa3bea",
+  "created_utc": "2026-10-09T02:29:24.476849+00:00",
+  "models_scored": 32,
+  "preferred": {
+    "female_innings_1": "RW",
+    "female_innings_2": "RBW",
+    "male_innings_1": "IBW",
+    "male_innings_2": "IBW"
+  },
+  "training_fits": 0,
+  "test_scored": false,
+  "split_counts": {
+    "train": {
+      "events": 252670,
+      "matches": 1065
+    },
+    "validation": {
+      "events": 54201,
+      "matches": 228
+    }
+  },
+  "limitations": [
+    "Training scores are in-sample, not independent generalisation estimates.",
+    "Validation scores also guided model selection and are not independent confirmation.",
+    "Positive gap means validation loss exceeds training loss; it is not a standalone overfitting verdict.",
+    "Chronological population changes and match composition can also affect the gap.",
+    "Log Loss and Brier are event-weighted; deliveries from one match are not independent outcomes.",
+    "These diagnostics do not change feature groups, algorithms, parameters or selected models."
+  ]
+}

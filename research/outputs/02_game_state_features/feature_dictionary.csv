@@ -1,0 +1,48 @@
+feature,role,definition,missing_rows,dtype
+match_id,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+source_row,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+match_innings,base_numeric,Innings indicator (1 or 2); target perspective does not change.,0,int64
+event_sequence,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+batting_team,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+bowling_team,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+striker,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+non_striker,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+bowler,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+match_date,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,datetime64[ns]
+gender,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+toss_winner,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+toss_decision,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+first_batting_team,optional_identity,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+second_batting_team,optional_identity,Identifier / diagnostic only; excluded from the default model feature list.,0,object
+first_batting_team_win,label,"Label only: first-innings batting team eventually won, constant across both innings.",0,int8
+first_team_prior_matches,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+first_team_prior_win_rate,base_numeric,Strict prior-date gender-specific cohort wins/counts with configured Beta pseudo-counts. No current-date results.,0,float64
+first_team_recent_win_rate,base_numeric,Prior-date match-count-decayed wins/counts with configured Beta pseudo-counts; half-life in config.,0,float64
+second_team_prior_matches,identifier_or_diagnostic,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+second_team_prior_win_rate,base_numeric,Strict prior-date gender-specific cohort wins/counts with configured Beta pseudo-counts. No current-date results.,0,float64
+second_team_recent_win_rate,base_numeric,Prior-date match-count-decayed wins/counts with configured Beta pseudo-counts; half-life in config.,0,float64
+pre_score,base_numeric,Cumulative score before event; includes pre-innings and earlier event penalties only.,0,int64
+pre_wickets,identifier_or_diagnostic,Dismissals before event; temporary retirement is not a wicket.,0,int64
+wickets_remaining,base_numeric,10 minus dismissals; NOT roster-based available batter count.,0,int64
+legal_balls_elapsed,identifier_or_diagnostic,Observed legal deliveries completed before this event.,0,int64
+source_over,identifier_or_diagnostic,Observed zero-based over coordinate; never future miscount length.,0,int64
+scheduled_balls_remaining_estimate,base_numeric,"6*(19-source_over)+max(6-prior legal balls in current over,0). Nominal slots, not guaranteed balls left.",0,int64
+audit_pre_legal_in_over,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+audit_overrun_before_event,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,bool
+audit_rate_denominator_floored,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,bool
+no_legal_ball_yet,base_numeric,One until the first legal delivery has completed.,0,int8
+current_run_rate,base_numeric,"6*pre_score/legal_balls_elapsed; zero before first legal ball, flagged separately.",0,float64
+innings_phase,base_categorical,"Observed overs 1-6 powerplay, 7-15 middle, 16-20 death (analysis convention).",0,object
+target_runs,base_numeric,"Official chase target, available only in innings 2; NA in innings 1.",201208,float64
+runs_required,base_numeric,Official target minus pre-score; innings 2 only.,201208,float64
+required_run_rate,base_numeric,"6*runs_required/max(nominal remaining slots,1); innings 2 only. Zero-slot miscounts flagged.",201208,float64
+run_rate_differential,base_numeric,Current minus required rate; innings 2 only.,201208,float64
+toss_first_team_won,base_numeric,Toss winner is first-innings batting team.,0,int8
+toss_elected_bat,identifier_or_diagnostic,Toss winner elected to bat. Retained as an alternative; redundant with toss_first_team_won in this standard cohort.,0,int8
+runs_prev_10_events,optional_recent_events,"Total runs including extras in previous up-to-10 recorded events of this innings, excluding current event.",0,int64
+wickets_prev_10_events,optional_recent_events,True dismissals in previous up-to-10 recorded events of this innings; excludes temporary retirements.,0,int64
+audit_recent_window_events,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+audit_runs_total,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+audit_wicket_count,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+audit_post_score,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,int64
+audit_legal_delivery,audit_only,Identifier / diagnostic only; excluded from the default model feature list.,0,int64

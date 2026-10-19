@@ -1,0 +1,8 @@
+metric,definition,numerator,denominator,multiplier,pseudo_unit,raw_zero_denominator,snapshot
+batting_strike_rate,Batter runs per 100 non-wide events (no-ball events included).,batting_runs,balls_faced,100.0,balls,NA,strictly before match date
+batting_average,"Batter runs per true dismissal; temporary retirement excluded. No dismissal -> raw NA, not zero.",batting_runs,batting_dismissals,1.0,dismissals,NA,strictly before match date
+batting_boundary_rate,Non-wide events with batter runs 4 or 6 divided by faced events; not boundary-run share.,boundary_balls,balls_faced,1.0,balls,NA,strictly before match date
+batting_dot_rate,Non-wide events with zero batter runs divided by faced events; byes may occur.,batting_dot_balls,balls_faced,1.0,balls,NA,strictly before match date
+bowling_economy,"6*(batter runs + wides + no-ball extras)/legal balls; byes, legbyes and separate penalties excluded.",bowling_runs_conceded,legal_balls_bowled,6.0,balls,NA,strictly before match date
+bowling_wicket_rate,"Bowler-credited dismissals per legal ball; run out, retired out, timed out etc excluded. Not a Bernoulli probability.",bowler_wickets,legal_balls_bowled,1.0,balls,NA,strictly before match date
+bowling_dot_rate,Legal events with zero total runs divided by legal balls; different from batting dot rate.,bowling_dot_balls,legal_balls_bowled,1.0,balls,NA,strictly before match date

@@ -1,0 +1,25 @@
+{
+  "stage": "03_player_quality_features",
+  "history_scope": "Stage 01 retained cohort only",
+  "time_rule": "strictly earlier match dates; same-date results update only after all snapshots",
+  "identity_rule": "Cricsheet registry ID within gender; names are display labels",
+  "reference_policy": "Gender-specific prior-date pooled rates, regularised by fixed cold-start pseudo-observations",
+  "participant_policy": "Profile every listed participant; listing is NOT proof of starting XI or live availability",
+  "batting_ball_definition": "recorded event without wides; includes no-ball events",
+  "batting_dot_definition": "zero batter runs on a non-wide event",
+  "bowling_dot_definition": "zero total event runs on a legal delivery",
+  "player_pseudo_balls": 120.0,
+  "player_pseudo_dismissals": 10.0,
+  "population_pseudo_balls": 600.0,
+  "population_pseudo_dismissals": 50.0,
+  "cold_start": {
+    "batting_strike_rate": 110.0,
+    "batting_average": 20.0,
+    "batting_boundary_rate": 0.10,
+    "batting_dot_rate": 0.40,
+    "bowling_economy": 7.5,
+    "bowling_wicket_rate": 0.041666666666666664,
+    "bowling_dot_rate": 0.40
+  },
+  "parameter_status": "Prespecified engineering defaults, not claimed optimal or tuned. Batting average, strike rate, bowling economy and wicket-rate seeds follow B; new proportion defaults are explicit assumptions. Both genders share cold-start defaults only; all observed references and histories are gender-specific."
+}

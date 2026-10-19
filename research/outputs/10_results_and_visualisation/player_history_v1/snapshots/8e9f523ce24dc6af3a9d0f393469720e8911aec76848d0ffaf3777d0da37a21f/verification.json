@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "player_match_rows": 5016,
+  "verified_statistics": [
+    "runs",
+    "balls_faced",
+    "dismissals",
+    "legal_balls_bowled",
+    "runs_conceded",
+    "wickets",
+    "dot_balls"
+  ],
+  "verified_nwc_roles": 6402,
+  "verified_team_rows": 456,
+  "max_team_closure_error": 8.326672684688674e-16,
+  "non_boundary_scoring_events": 3,
+  "innings_checked": 456,
+  "event_rows": 53850,
+  "source_json_alignment": "all events matched by match/innings/sequence and values",
+  "training_fits": 0,
+  "prediction_calls": 0
+}

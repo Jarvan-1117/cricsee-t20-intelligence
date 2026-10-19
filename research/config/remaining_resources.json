@@ -1,0 +1,13 @@
+{
+  "stage": "05_remaining_resource_features",
+  "contract_version": "resource_sums_v2",
+  "cohort_policy": "all whole matches ready in Stage 04; reviews retained separately",
+  "prediction_timing": "pre-event; no future appearances or allocations",
+  "quality_policy": "Stage 03 prior-date smoothed metrics; separate dimensions; no centering",
+  "batting_policy": "sum available never-entered batters only; exclude current pair and previously entered players",
+  "bowling_policy": "sum Stage 04 remaining nominal balls / 6 times bowling quality; include current bowler",
+  "direct_quality_policy": "exclude striker, non-striker and bowler direct quality and evidence",
+  "capacity_policy": "individual upper bounds, not an allocated innings budget; no historical-use weights",
+  "zero_pool_policy": "empty batting pool or zero eligible bowling capacities produce zero sums",
+  "tolerance": 1e-8
+}

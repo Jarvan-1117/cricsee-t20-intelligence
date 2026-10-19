@@ -1,0 +1,40 @@
+{
+  "status": "complete",
+  "stage": "07_resource_representation_experiments",
+  "contract_version": "resource_sums_v2",
+  "design_version": "four_way_interactions_v1",
+  "experiment_id": "6c2f2e91b378e74e6d8007dffd3e3a13d9c5add7d1fc30e0ba81d1501caf6374",
+  "created_utc": "2026-10-07T06:05:18.726905+00:00",
+  "upstream_stage06_id": "6e6900f138d2d126cde400922f163121d708f513b0af8e8b94c27f2b1d77ec77",
+  "arms": [
+    "RBW",
+    "IB",
+    "IW",
+    "IBW"
+  ],
+  "new_candidate_fits": 144,
+  "reused_rbw_selected_models": 4,
+  "selected_models": 16,
+  "downstream_candidates": 4,
+  "development_matches": 1293,
+  "development_events": 306871,
+  "validation_prediction_rows": 216804,
+  "test_predictions": 0,
+  "test_scored": false,
+  "calibration_fits": 0,
+  "downstream_activated": false,
+  "extension_ids": {
+    "IB": "6c2f2e91b378e74e6d8007dffd3e3a13d9c5add7d1fc30e0ba81d1501caf6374",
+    "IW": "6c2f2e91b378e74e6d8007dffd3e3a13d9c5add7d1fc30e0ba81d1501caf6374",
+    "IBW": "6c2f2e91b378e74e6d8007dffd3e3a13d9c5add7d1fc30e0ba81d1501caf6374"
+  },
+  "limitations": [
+    "Exploratory representation comparisons; independent validation is needed for stronger generalization claims.",
+    "Validation-selected gains are subject to selection uncertainty, not independent confirmation.",
+    "Remaining-ball fraction is nominal pre-event progress, not actual future innings length.",
+    "No explicit products does not mean no learned interactions: tree models can learn them.",
+    "Matched parameters do not hold learned preprocessing, coefficients or trees fixed.",
+    "Resources remain conditioned on historical quality; these comparisons are not causal attribution.",
+    "No test metrics, calibration fitting, NWC or automatic downstream activation in this stage."
+  ]
+}

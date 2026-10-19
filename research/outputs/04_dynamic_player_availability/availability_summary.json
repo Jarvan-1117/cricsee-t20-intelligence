@@ -1,0 +1,52 @@
+{
+  "status": "complete",
+  "stage": "04_dynamic_player_availability",
+  "created_utc": "2026-10-06T05:59:53.635309+00:00",
+  "availability_id": "e87e817800131e0c54c1e37c3baae23579ad457f1ced6d5daaace6f9292275f3",
+  "upstream_quality_id": "f5ca00d19816ce50dbfea8ad23962809760ae1622322726dcc0d55ae5731e832",
+  "matches": 1627,
+  "events": 385786,
+  "replayed_matches": 1627,
+  "replayed_events": 385786,
+  "ready_matches": 1521,
+  "ready_events": 360721,
+  "review_matches": 106,
+  "quarantined_matches": 0,
+  "example_matches": {
+    "ordinary": 211028,
+    "retirement": 560921
+  },
+  "models_trained": 0,
+  "config": {
+    "stage": "04_dynamic_player_availability",
+    "prediction_timing": "before each recorded event, after documented pre-event replacements",
+    "balls_per_over": 6,
+    "maximum_overs_per_bowler": 4,
+    "scheduled_overs": 20,
+    "missing_evidence_policy": "inferred from recorded events, not confirmed medical or legal eligibility",
+    "untimed_absence_policy": "audit only; never remove a player retrospectively from earlier features",
+    "replacement_quota_policy": "shared outgoing-player slot for diagnostics; referee restrictions require review",
+    "formal_resource_policy": "only whole matches marked ready_for_resource_features; same cohort for every experimental arm",
+    "sources": [
+      "https://cricsheet.org/format/json/#replacements",
+      "https://cricsheet.org/format/json/#the-innings-section",
+      "https://www.icc-cricket.com/news/mens-t20i-match-clause-13-innings",
+      "https://www.icc-cricket.com/news/mens-t20i-match-clause-17-the-over"
+    ]
+  },
+  "checks": {
+    "all_source_events_accounted_for": true,
+    "replayed_source_order_unchanged": true,
+    "current_pair_partition": true,
+    "nonnegative_bounded_nominal_capacity": true,
+    "whole_match_resource_gate": true,
+    "stage03_cohort_unchanged": true
+  },
+  "limitations": [
+    "Unrecorded injury and fielding absences are not observable.",
+    "Review flags may be retrospective; never use them as predictors.",
+    "No penalty-time or historical match-referee restriction simulator.",
+    "Nominal capacities are not jointly feasible allocations or next-bowler choices.",
+    "No resource-quality aggregation, training or accuracy claim."
+  ]
+}

@@ -1,0 +1,13 @@
+case,destination,convention
+first_innings_boundary,team,First-innings last event plus transition; endpoint unidentified.
+post_innings_penalty,team,Terminal/boundary interval includes a post-innings award.
+penalty_event,team,Do not infer individual responsibility from a team penalty.
+extras_and_exit,team,Do not divide a mixed interval by runs or guess responsibility.
+wide_or_no_ball,team,Whole interval retained at team level; no automatic striker credit.
+bye_or_legbye,team,No individual batting/bowling split inferred.
+bowled_or_lbw_without_extras,player_pair,Current striker and bowler receive opposite interval values; dismissed striker must match source.
+run_out,team,Do not force a non-striker or fielding event onto the striker/bowler pair.
+caught_caught_and_bowled_stumped,team,Fielding/exit interval not individually decomposed by this protocol.
+other_exit_or_retirement,team,No personal retirement/responsibility inference.
+ordinary_without_extras_or_exit,player_pair,"Current-event striker/bowler proxy, including dot balls and ordinary strike changes."
+role_changes,flag_only,"Record strike swaps, batting-pair changes and next bowler changes; do not claim isolated effects."

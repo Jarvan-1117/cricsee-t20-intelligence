@@ -1,0 +1,17 @@
+{
+  "stage": "04_dynamic_player_availability",
+  "prediction_timing": "before each recorded event, after documented pre-event replacements",
+  "balls_per_over": 6,
+  "maximum_overs_per_bowler": 4,
+  "scheduled_overs": 20,
+  "missing_evidence_policy": "inferred from recorded events, not confirmed medical or legal eligibility",
+  "untimed_absence_policy": "audit only; never remove a player retrospectively from earlier features",
+  "replacement_quota_policy": "shared outgoing-player slot for diagnostics; referee restrictions require review",
+  "formal_resource_policy": "only whole matches marked ready_for_resource_features; same cohort for every experimental arm",
+  "sources": [
+    "https://cricsheet.org/format/json/#replacements",
+    "https://cricsheet.org/format/json/#the-innings-section",
+    "https://www.icc-cricket.com/news/mens-t20i-match-clause-13-innings",
+    "https://www.icc-cricket.com/news/mens-t20i-match-clause-17-the-over"
+  ]
+}

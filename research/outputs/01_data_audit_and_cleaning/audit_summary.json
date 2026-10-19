@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "mode": "export",
+  "audit_id": "69804d9698fb8c81c6c47d3965c293fcef455d7fbe16e9c187574b0e8496b99f",
+  "created_utc": "2026-10-01T08:08:21.517521+00:00",
+  "input_sha256": {
+    "data/raw/t20i_matches_data.csv": "f3388b4a5c876f9c503f1826d413e87a7decf05bb85af2f410fa9b750b3758f5",
+    "data/raw/t20i_deliveries_data.csv": "26cc7dd9e57f2e620e7d85cec3b847024633116c1ab8ea541cbf02017e5001b5",
+    "data/raw/cricsheet/t20s_female_json.zip": "4f66501702589db71917ef3f8386fa6ff99850d695f397dfd262cbc1d7eaf764",
+    "data/raw/cricsheet/t20s_male_json.zip": "e098ad15622ac9e31da60e5e2ecd793c3d33352eb25b2a286b3cf08ffe98fa9e",
+    "config/experiment.yaml": "2b80947ee97a6ab8bb1412d8395300ee87da32cfc32a0315c363c3a964368a90",
+    "src/data_preparation.py": "9aece3c89f6dd9b583310da8d5e1e48b802095456b11028fa5442d9fb6339091"
+  },
+  "python_version": "3.10.6",
+  "pandas_version": "2.3.3",
+  "numpy_version": "2.2.6",
+  "source_match_rows": 5602,
+  "source_delivery_rows": 1266835,
+  "audited_matches": 5602,
+  "match_counts": {
+    "included": 1627,
+    "excluded": 3975,
+    "pending_review": 0
+  },
+  "included_events": 385786,
+  "included_by_gender": [
+    {
+      "gender": "female",
+      "matches": 627,
+      "events": 147722
+    },
+    {
+      "gender": "male",
+      "matches": 1000,
+      "events": 238064
+    }
+  ],
+  "approved_field_corrections": 44508,
+  "report_sha256": {
+    "outputs/01_data_audit_and_cleaning/match_decisions.csv": "b3c0dfe88c068a1305444907f0b82df24f18a33885fe75b0c7015557013d16eb",
+    "outputs/01_data_audit_and_cleaning/included_matches.csv": "561003b79b164b11c1a1060636e92327d5bd9c7ac09372c5ce68d63928f379ae",
+    "outputs/01_data_audit_and_cleaning/excluded_matches.csv": "3e19842ebb0a7cd5916581d672fc97b81dc3f214d5a1cfa41dcc015787c48447",
+    "outputs/01_data_audit_and_cleaning/pending_matches.csv": "f82c9f99fbf429799c64f5fc33c5aadf8e8f711c50a453b748a1d65c561a911b",
+    "outputs/01_data_audit_and_cleaning/reason_counts.csv": "ba3042be0e4724a083912c75fa6df08fae1b0515782a04d37568a97b70cf2b0a",
+    "outputs/01_data_audit_and_cleaning/missing_values.csv": "4f14d3b78d6c4ce73ecd014759eabaa9781610cd704de30ae9a113fe483f2523",
+    "outputs/01_data_audit_and_cleaning/innings_audit.csv": "4023b369dad7b163b57859c6a97f76c216de448ef42bf926f6923277122f034c",
+    "outputs/01_data_audit_and_cleaning/corrections.csv": "ea4e86bea08665354bcb62f664e1d14c9273a4f9fcf6f7b1e27498a23bcb9f87",
+    "outputs/01_data_audit_and_cleaning/clean_event_preview.csv": "f97235a99160942cbe782119cce1769aaee3d7373ff9f9bce37ba74bb3ea5e6a"
+  },
+  "clean_export_written": true,
+  "notes": [
+    "Out-of-scope matches receive metadata screening; event-level checks focus on otherwise eligible matches.",
+    "Excluded matches may also have unresolved issues. Counts of reasons overlap.",
+    "No automatic row deletion or missing-value imputation. Missing core values require review.",
+    "Roster coverage and eligibility are investigated in Stage 04, not used to filter this cohort.",
+    "Audit totals, final outcomes and miscount lengths must never become live prediction features.",
+    "No train/validation/test split or learned feature is created by Stage 01."
+  ]
+}

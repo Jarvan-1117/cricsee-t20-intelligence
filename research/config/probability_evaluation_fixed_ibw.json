@@ -1,0 +1,108 @@
+{
+  "stage": "08_probability_evaluation",
+  "contract_version": "resource_sums_v2_fixed_ibw_v1",
+  "target": "first_batting_team_win",
+  "arms": [
+    "R0",
+    "R1",
+    "RB",
+    "RW",
+    "RBW",
+    "IB",
+    "IW",
+    "IBW"
+  ],
+  "primary_pair": [
+    "RBW",
+    "R1"
+  ],
+  "comparisons": [
+    [
+      "RBW",
+      "R1"
+    ],
+    [
+      "RB",
+      "R1"
+    ],
+    [
+      "RW",
+      "R1"
+    ],
+    [
+      "RBW",
+      "RW"
+    ],
+    [
+      "RBW",
+      "RB"
+    ],
+    [
+      "R1",
+      "R0"
+    ],
+    [
+      "IB",
+      "RBW"
+    ],
+    [
+      "IW",
+      "RBW"
+    ],
+    [
+      "IBW",
+      "RBW"
+    ],
+    [
+      "IB",
+      "R1"
+    ],
+    [
+      "IW",
+      "R1"
+    ],
+    [
+      "IBW",
+      "R1"
+    ]
+  ],
+  "calibration_bins": 10,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 32933,
+  "confidence_level": 0.95,
+  "probability_epsilon": 1e-15,
+  "fit_models": false,
+  "fit_calibrators": false,
+  "refit_train_validation": false,
+  "scope": "frozen chronological test split; same event cohort for all arms",
+  "bootstrap_unit": "paired whole match within gender; same draws for both innings and all arms",
+  "interval_policy": "pointwise percentile intervals; not multiplicity-adjusted",
+  "importance": {
+    "method": "marginal permutation of raw input columns",
+    "models": "four fixed-IBW models with validation-selected algorithms and parameters",
+    "dataset": "complete frozen test split per track",
+    "metric": "event_log_loss_increase",
+    "repeats": 10,
+    "seed": 32934,
+    "units": "each actual model input and nonempty disjoint state/resource/interaction blocks",
+    "permutation": "within track across events; shared row permutation within each block",
+    "uncertainty": "sample standard deviation across permutations; not a confidence interval",
+    "purpose": "descriptive model reliance only; no feature selection or model promotion",
+    "constant_model": "not applicable: no input features; never fabricate zero feature scores"
+  },
+  "resource_contract_version": "resource_sums_v2",
+  "selection_policy": "fixed_ibw_within_arm_validation_log_loss_v1",
+  "selection_metric": "validation_event_log_loss",
+  "tie_break": [
+    "R0",
+    "R1",
+    "RB",
+    "RW",
+    "RBW",
+    "IB",
+    "IW",
+    "IBW"
+  ],
+  "preferred_arm": "IBW",
+  "selection_scope": "IBW only; inherit Stage 07 within-arm algorithm and parameter selection"
+}

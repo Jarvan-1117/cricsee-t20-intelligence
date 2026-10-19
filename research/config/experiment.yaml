@@ -1,0 +1,27 @@
+{
+  "config_format": "JSON-compatible YAML; parsed with the Python standard library",
+  "stage": "01_data_audit_and_cleaning",
+  "team_scope": ["Sri Lanka", "India", "South Africa", "West Indies", "England", "New Zealand", "Australia", "Ireland", "Pakistan", "Zimbabwe", "Bangladesh"],
+  "genders": ["female", "male"],
+  "match_type": "T20",
+  "scheduled_overs": 20,
+  "balls_per_over": 6,
+  "scope_exclusions": ["tie", "no_result", "awarded", "adjusted_method", "reduced_overs", "super_over", "declared_or_forfeited"],
+  "unresolved_policy": "pending_review; never silently repair or truncate",
+  "miscount_policy": "retain source-documented miscounts when all other eligibility checks pass",
+  "injury_completion_policy": "accept source-verified no-pair endings using 11 distinct players, observed retirements and returns, and absent-hurt evidence; audit only, never a live availability feature",
+  "lineup_policy": "audit in Stage 04; roster reconstruction is not a Stage 01 eligibility criterion",
+  "prediction_timing": "pre_delivery; model features are constructed in Stage 02",
+  "paths": {
+    "matches": "data/raw/t20i_matches_data.csv",
+    "deliveries": "data/raw/t20i_deliveries_data.csv",
+    "female_json": "data/raw/cricsheet/t20s_female_json.zip",
+    "male_json": "data/raw/cricsheet/t20s_male_json.zip"
+  },
+  "rule_sources": {
+    "original_example": "docs/original_materials/feature_engineering.ipynb: cells 3, 7, 8",
+    "project_overview": "docs/references/Nett Win Contribution Project Overview.docx",
+    "source_schema": "https://cricsheet.org/format/json/",
+    "interpretation": "The eleven-team scope and complete-match intent come from the original example. Explicit special-format exclusions and source-verification safeguards are research decisions, not verbatim overview requirements."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "stage": "06_model_training_and_comparison",
+  "contract_version": "resource_sums_v2",
+  "target": "first_batting_team_win",
+  "split_fractions": [0.70, 0.15, 0.15],
+  "selection_metric": "validation_event_log_loss",
+  "preferred_arm": "both_resources",
+  "selection_policy": "fixed_rbw_main_v2",
+  "seed": 32933,
+  "threads": 2,
+  "probability_epsilon": 1e-15,
+  "optional_background": [],
+  "refit_train_validation": false,
+  "candidate_grid": {
+    "logistic_regression": [
+      {"C": 0.01},
+      {"C": 0.1},
+      {"C": 1.0}
+    ],
+    "random_forest": [
+      {"n_estimators": 200, "max_depth": 8, "min_samples_leaf": 100},
+      {"n_estimators": 200, "max_depth": 14, "min_samples_leaf": 50},
+      {"n_estimators": 200, "max_depth": null, "min_samples_leaf": 30}
+    ],
+    "hist_gradient_boosting": [
+      {"max_iter": 200, "learning_rate": 0.05, "max_leaf_nodes": 15},
+      {"max_iter": 200, "learning_rate": 0.1, "max_leaf_nodes": 15},
+      {"max_iter": 200, "learning_rate": 0.05, "max_leaf_nodes": 31}
+    ],
+    "xgboost": [
+      {"n_estimators": 200, "learning_rate": 0.05, "max_depth": 3},
+      {"n_estimators": 200, "learning_rate": 0.1, "max_depth": 3},
+      {"n_estimators": 200, "learning_rate": 0.05, "max_depth": 6}
+    ]
+  }
+}

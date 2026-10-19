@@ -1,0 +1,5 @@
+track,arm_code,family,status
+female_innings_1,RW,xgboost,evaluated
+female_innings_2,RBW,hist_gradient_boosting,evaluated
+male_innings_1,IBW,logistic_regression,evaluated
+male_innings_2,IBW,random_forest,evaluated

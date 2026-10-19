@@ -1,0 +1,13 @@
+gender,match_innings,innings_phase,events,matches
+female,1,death,19037,626
+female,1,middle,34830,627
+female,1,powerplay,23514,627
+female,2,death,13288,544
+female,2,middle,33421,625
+female,2,powerplay,23632,627
+male,1,death,30842,994
+male,1,middle,55623,1000
+male,1,powerplay,37362,1000
+male,2,death,22158,905
+male,2,middle,54546,999
+male,2,powerplay,37533,1000

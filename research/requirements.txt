@@ -1,0 +1,9 @@
+# Stages 01-10 runtime. Full reproducible environment: requirements-lock.txt.
+pandas==2.3.3
+numpy==2.2.6
+ipykernel==7.3.0
+matplotlib==3.10.9
+scikit-learn==1.7.2
+xgboost==3.0.5
+joblib==1.6.0
+threadpoolctl==3.7.0

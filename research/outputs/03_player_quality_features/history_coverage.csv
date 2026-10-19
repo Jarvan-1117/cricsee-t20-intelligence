@@ -1,0 +1,13 @@
+gender,role,history_band,player_match_profiles,proportion
+female,batting,No prior balls,1130,0.08187812477356714
+female,batting,1-119 prior balls,5730,0.41518730526773423
+female,batting,120+ prior balls,6941,0.5029345699586987
+female,bowling,No prior balls,4134,0.299543511339758
+female,bowling,1-119 prior balls,2947,0.21353525106876314
+female,bowling,120+ prior balls,6720,0.4869212375914789
+male,batting,No prior balls,1944,0.08834355828220859
+male,batting,1-119 prior balls,9600,0.43626448534423995
+male,batting,120+ prior balls,10461,0.47539195637355147
+male,bowling,No prior balls,7529,0.3421495114746648
+male,bowling,1-119 prior balls,5258,0.23894569416041808
+male,bowling,120+ prior balls,9218,0.41890479436491707

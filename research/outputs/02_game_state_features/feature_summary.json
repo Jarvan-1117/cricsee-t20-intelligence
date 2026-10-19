@@ -1,0 +1,61 @@
+{
+  "status": "complete",
+  "stage": "02_game_state_features",
+  "created_utc": "2026-10-01T09:06:43.734152+00:00",
+  "feature_id": "23d7cb39fed6eba6d52f75750e6d53a37ffe8aaac2c4f86b376f85e0b905631c",
+  "upstream_audit_id": "69804d9698fb8c81c6c47d3965c293fcef455d7fbe16e9c187574b0e8496b99f",
+  "matches": 1627,
+  "events": 385786,
+  "innings": 3254,
+  "matches_by_gender": {
+    "female": 627,
+    "male": 1000
+  },
+  "events_by_gender": {
+    "female": 147722,
+    "male": 238064
+  },
+  "checks": {
+    "one_row_per_source_event": true,
+    "same_match_cohort": true,
+    "two_innings_per_match": true,
+    "fixed_binary_target": true,
+    "first_innings_chase_fields_absent": true,
+    "second_innings_chase_fields_present": true,
+    "no_missing_common_features": true,
+    "finite_numeric_features": true,
+    "valid_wickets": true,
+    "nonnegative_score_and_slots": true,
+    "empty_window_at_innings_start": true,
+    "phase_matches_observed_over": true
+  },
+  "config": {
+    "stage": "02_game_state_features",
+    "prediction_timing": "pre_delivery",
+    "target": "first_batting_team_win",
+    "recent_event_window": 10,
+    "team_form_half_life_matches": 10,
+    "team_rate_prior_wins": 1.0,
+    "team_rate_prior_losses": 1.0,
+    "history_scope": "Stage 01 included matches, strictly earlier dates, within gender",
+    "same_date_policy": "Read all snapshots before updating any result on that date",
+    "recent_form_same_date_policy": "Equal weight within date; decay older history by the number of matches",
+    "phase_over_boundaries": [
+      6,
+      15
+    ],
+    "scheduled_overs": 20,
+    "balls_per_over": 6
+  },
+  "models_trained": 0,
+  "overrun_events": 9,
+  "rate_denominator_floored_events": 0,
+  "python_version": "3.10.6",
+  "pandas_version": "2.3.3",
+  "limitations": [
+    "Nominal wickets are not actual available batters; Stage 04 owns dynamic availability.",
+    "Team history uses the retained cohort only, not every international match ever played.",
+    "Recent event and identity blocks remain optional until validation comparison in Stage 06.",
+    "No prediction improvement or calibration claim is established by this feature export."
+  ]
+}

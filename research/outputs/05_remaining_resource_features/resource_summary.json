@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "stage": "05_remaining_resource_features",
+  "contract_version": "resource_sums_v2",
+  "created_utc": "2026-10-06T06:04:23.990879+00:00",
+  "resource_id": "fcc1d52d5696f4ed5829a984f7ad65cc634a973f4bc2fe26899891bfa2fc2a2d",
+  "upstream_availability_id": "e87e817800131e0c54c1e37c3baae23579ad457f1ced6d5daaace6f9292275f3",
+  "upstream_matches": 1627,
+  "upstream_events": 385786,
+  "matches": 1521,
+  "events": 360721,
+  "review_or_quarantined_matches": 106,
+  "matches_by_gender": {
+    "female": 583,
+    "male": 938
+  },
+  "example_match_id": 211028,
+  "models_trained": 0,
+  "splits_created": 0,
+  "config": {
+    "stage": "05_remaining_resource_features",
+    "contract_version": "resource_sums_v2",
+    "cohort_policy": "all whole matches ready in Stage 04; reviews retained separately",
+    "prediction_timing": "pre-event; no future appearances or allocations",
+    "quality_policy": "Stage 03 prior-date smoothed metrics; separate dimensions; no centering",
+    "batting_policy": "sum available never-entered batters only; exclude current pair and previously entered players",
+    "bowling_policy": "sum Stage 04 remaining nominal balls / 6 times bowling quality; include current bowler",
+    "direct_quality_policy": "exclude striker, non-striker and bowler direct quality and evidence",
+    "capacity_policy": "individual upper bounds, not an allocated innings budget; no historical-use weights",
+    "zero_pool_policy": "empty batting pool or zero eligible bowling capacities produce zero sums",
+    "tolerance": 1e-08
+  },
+  "checks": {
+    "same_whole_match_cohort_for_all_arms": true,
+    "stage03_source_files_unchanged": true,
+    "direct_quality_and_evidence_removed_from_model_input": true,
+    "stage04_source_order_and_actor_ids_match": true,
+    "finite_resources": true,
+    "per_player_sums_reconciled": true,
+    "no_usage_allocation_or_centering": true
+  },
+  "reconciliation": {
+    "max_batting_sum_error": 0.0,
+    "max_bowling_sum_error": 0.0,
+    "zero_nominal_budget_events": 0
+  },
+  "limitations": [
+    "Record-based availability upper bounds, not full medical/legal eligibility.",
+    "Separate quality metrics, not expected runs or a composite score.",
+    "Individual bowling capacities may exceed innings budget in total; no future allocation is predicted.",
+    "Current-bowler quality remains indirectly; no independence or causal NWC claim.",
+    "Stage 06-08 migration required; old F/E results do not evaluate these features.",
+    "Inspected test period; no improvement established here."
+  ]
+}

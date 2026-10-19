@@ -1,0 +1,5 @@
+track,arm_code,family,model_sha256,retained_features,removed_constant_features,metric,status,explanation
+female_innings_1,RW,xgboost,1bdf9ffefdf3a8609c5269a7e405462a0f2d28d4aab326f336eec788d4a8af08,16,0,xgboost_mean_split_gain,exported,Mean gain over training splits using each transformed feature; unnormalised.
+female_innings_2,RBW,hist_gradient_boosting,cdf2c15b041af71e02811eb950be1c158d64300d9ba56b0a50b6dfffec24301d,24,0,not_exported,unsupported_public_interface,Installed HistGradientBoosting has no public Gain/feature_importances_ interface; use permutation importance.
+male_innings_1,IBW,logistic_regression,4ff8903b91c83aa1b9562cfbdf9d85707ba42446102bf6380b00210f0815ad4d,27,0,not_applicable,not_applicable_linear_model,Logistic Regression is not a tree model; coefficients are not Gain. Use permutation importance.
+male_innings_2,IBW,random_forest,9aa6fb9402335a4f35cdbade3d3f5b446dc1bc412d54c8d9e43b1a15d539c245,31,0,random_forest_normalized_mdi,exported,Normalised mean decrease in impurity across trees; not XGBoost Gain.

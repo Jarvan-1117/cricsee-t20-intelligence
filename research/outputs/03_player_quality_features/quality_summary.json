@@ -1,0 +1,86 @@
+{
+  "status": "complete",
+  "stage": "03_player_quality_features",
+  "created_utc": "2026-10-01T11:07:38.244967+00:00",
+  "quality_id": "f5ca00d19816ce50dbfea8ad23962809760ae1622322726dcc0d55ae5731e832",
+  "upstream_feature_id": "23d7cb39fed6eba6d52f75750e6d53a37ffe8aaac2c4f86b376f85e0b905631c",
+  "matches": 1627,
+  "events": 385786,
+  "profiles": 35806,
+  "players_by_gender": {
+    "female": 563,
+    "male": 1110
+  },
+  "listed_profiles_by_gender": {
+    "female": 13801,
+    "male": 22005
+  },
+  "matches_with_extra_listed_participants": 11,
+  "ids_with_multiple_display_names": 5,
+  "current_quality_features": 11,
+  "current_evidence_features": 8,
+  "checks": {
+    "one_profile_per_listed_player_match": true,
+    "profile_cohort_preserved": true,
+    "same_event_count": true,
+    "same_source_order": true,
+    "finite_smoothed_metrics": true,
+    "nonnegative_smoothed_metrics": true,
+    "nonnegative_prior_counts": true,
+    "history_strictly_before_date": true,
+    "no_missing_model_features": true,
+    "unseen_players_equal_prior_reference": true,
+    "raw_zero_denominators_remain_missing": true,
+    "batting_boundary_rate_bounded": true,
+    "batting_dot_rate_bounded": true,
+    "bowling_dot_rate_bounded": true
+  },
+  "config": {
+    "stage": "03_player_quality_features",
+    "history_scope": "Stage 01 retained cohort only",
+    "time_rule": "strictly earlier match dates; same-date results update only after all snapshots",
+    "identity_rule": "Cricsheet registry ID within gender; names are display labels",
+    "reference_policy": "Gender-specific prior-date pooled rates, regularised by fixed cold-start pseudo-observations",
+    "participant_policy": "Profile every listed participant; listing is NOT proof of starting XI or live availability",
+    "batting_ball_definition": "recorded event without wides; includes no-ball events",
+    "batting_dot_definition": "zero batter runs on a non-wide event",
+    "bowling_dot_definition": "zero total event runs on a legal delivery",
+    "player_pseudo_balls": 120.0,
+    "player_pseudo_dismissals": 10.0,
+    "population_pseudo_balls": 600.0,
+    "population_pseudo_dismissals": 50.0,
+    "cold_start": {
+      "batting_strike_rate": 110.0,
+      "batting_average": 20.0,
+      "batting_boundary_rate": 0.1,
+      "batting_dot_rate": 0.4,
+      "bowling_economy": 7.5,
+      "bowling_wicket_rate": 0.041666666666666664,
+      "bowling_dot_rate": 0.4
+    },
+    "parameter_status": "Prespecified engineering defaults, not claimed optimal or tuned. Batting average, strike rate, bowling economy and wicket-rate seeds follow B; new proportion defaults are explicit assumptions. Both genders share cold-start defaults only; all observed references and histories are gender-specific."
+  },
+  "models_trained": 0,
+  "accounting": {
+    "batting_runs": 445722,
+    "balls_faced": 373480,
+    "batting_dismissals": 20362,
+    "boundary_balls": 55217,
+    "batting_dot_balls": 150165,
+    "bowling_runs_conceded": 462322,
+    "legal_balls_bowled": 372015,
+    "bowler_wickets": 18584,
+    "bowling_dot_balls": 143122,
+    "batting_matches": 26080,
+    "bowling_matches": 19530,
+    "observed_matches": 34493,
+    "listed_matches": 35806
+  },
+  "limitations": [
+    "Only retained-cohort history, not full careers.",
+    "Prespecified smoothing defaults are not established as optimal.",
+    "Listed participants are not the starting XI or the active-player set.",
+    "Quality is a prior-date statistical profile, not causal skill or a calibrated prediction.",
+    "No claim of improved prediction; Stage 06-07 must evaluate this."
+  ]
+}

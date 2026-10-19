@@ -1,0 +1,33 @@
+{
+  "attribution_id": "f6a25bf2480b950fe31e69672273d7a4c06807f72e6efce1098ba6261d48baae",
+  "threshold_absolute_wpa": 0.25,
+  "test_matches": 228,
+  "selected_cases": 8,
+  "passed_cases": 8,
+  "failed_cases": 0,
+  "training_fits": 0,
+  "prediction_calls": 0,
+  "attribution_changes": 0,
+  "source_json_sha256": {
+    "female/1476993.json": "68ab46d52dd8e37605258a0f1fa1b2f265d37978ac00a9ed19fd8b74603b0dcf",
+    "female/1477597.json": "bdf01d51d0c6861d30519b305d58aba1bbe4f45f7111638a5bad44dcdad38178",
+    "male/1439900.json": "4e3487680fb4cd17795ea741309db9484eb245b48b920857276439d63f2ede8a",
+    "male/1444654.json": "0292aef0ba7212ae4ec288151c65c6f6c64a5d3429be14c0fc54fbff63686385",
+    "male/1472526.json": "120be8eef8626c93be71b4aec23a11dcc8cedeb2ec5a10781f4f50d1e9f0b1fc",
+    "male/1478900.json": "9e470c3109ab6a729770aba30d56a961dad50adf69a6c3a40ddc02a1c3b5138b",
+    "male/1512763.json": "93dc3a33780ff2d272cfb24d51c3bfe7c9895ea48d32103065fac24df9b41c1b",
+    "male/1538303.json": "39f5d7bdffc3dfc9a15186f72a1fc513fd29c2b64abe5f20f09fc22b9db95495"
+  },
+  "audit_code_sha256": "715aaa30f99c7e264bb8544f1e4174dce2c7313974a2ed5eacbc24b17fff953b",
+  "attribution_manifest_sha256": "29b2c82fb437001b334270bc477c4c47d1394e9204542de81219893f3ebbe9fb",
+  "limitations": [
+    "Outcome-selected cases are descriptive, not an unbiased calibration sample.",
+    "Passing source/accounting checks does not establish that a forecast is well calibrated.",
+    "Remaining balls use retrospective source-audited over lengths for diagnosis only.",
+    "No terminal clipping, reassignment, model reselection or test-driven tuning."
+  ],
+  "output_sha256": {
+    "cases.csv": "950003a8741368878b302b7a7d6a85b8c50c897f65f70a5e6589fef2787d55bc",
+    "last_five_events.csv": "9aa6f23586626bd9d58d790898c900d14e08cbbc70af4814bfed2e118ddc0c0a"
+  }
+}

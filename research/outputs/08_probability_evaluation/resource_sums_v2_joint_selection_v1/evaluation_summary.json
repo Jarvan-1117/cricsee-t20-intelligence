@@ -1,0 +1,38 @@
+{
+  "stage": "08_probability_evaluation",
+  "contract_version": "resource_sums_v2_joint_selection_v1",
+  "resource_contract_version": "resource_sums_v2",
+  "evaluation_id": "31bd1c42bb6e0ec84f9824da5fe496de9fc7e0680f32c96bc2db445e30fa3bea",
+  "created_utc": "2026-10-09T02:41:26.532758+00:00",
+  "selection_policy": "cross_group_validation_log_loss_v1",
+  "upstream_stage06_id": "6e6900f138d2d126cde400922f163121d708f513b0af8e8b94c27f2b1d77ec77",
+  "upstream_stage07_id": "6c2f2e91b378e74e6d8007dffd3e3a13d9c5add7d1fc30e0ba81d1501caf6374",
+  "models_evaluated": 32,
+  "test_matches": 228,
+  "test_events": 53850,
+  "prediction_rows": 430800,
+  "preferred_prediction_rows": 53850,
+  "preferred": {
+    "female_innings_1": "RW",
+    "female_innings_2": "RBW",
+    "male_innings_1": "IBW",
+    "male_innings_2": "IBW"
+  },
+  "training_fits": 0,
+  "calibration_fits": 0,
+  "comparison_rows": 192,
+  "bootstrap_replicates": 2000,
+  "importance_rows": 105,
+  "importance_models": 4,
+  "importance_repeat_rows": 1050,
+  "limitations": [
+    "Exploratory model comparisons; validation selection is not independent confirmation.",
+    "No test-driven selection, refitting, calibration fitting, terminal override or NWC.",
+    "Whole-match intervals are pointwise, condition on fitted models and omit selection uncertainty.",
+    "Match bootstrap does not remove temporal or team dependence.",
+    "Log loss and Brier do not isolate calibration; fixed-bin ECE depends on binning and sample size.",
+    "Importance shuffles actual input columns, including products separately: correlations and inconsistent products may distort interpretation.",
+    "Permutation importance is descriptive, not causal; shuffle SD is not a sampling confidence interval.",
+    "The test cohort has previously been inspected; these results are exploratory, not new untouched confirmation."
+  ]
+}

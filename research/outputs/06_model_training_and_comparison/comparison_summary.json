@@ -1,0 +1,45 @@
+{
+  "stage": "06_model_training_and_comparison",
+  "contract_version": "resource_sums_v2",
+  "experiment_id": "6e6900f138d2d126cde400922f163121d708f513b0af8e8b94c27f2b1d77ec77",
+  "upstream_resource_id": "fcc1d52d5696f4ed5829a984f7ad65cc634a973f4bc2fe26899891bfa2fc2a2d",
+  "created_utc": "2026-10-07T05:46:23.497104+00:00",
+  "matches": 1521,
+  "events": 360721,
+  "development_events": 306871,
+  "arms": [
+    "constant",
+    "state",
+    "batting_resources",
+    "bowling_resources",
+    "both_resources"
+  ],
+  "tracks": [
+    "female_innings_1",
+    "female_innings_2",
+    "male_innings_1",
+    "male_innings_2"
+  ],
+  "candidate_fits": 196,
+  "saved_family_models": 68,
+  "selected_arm_models": 20,
+  "test_predictions": 0,
+  "test_scored": false,
+  "fit_scope": "train only; no train+validation refit",
+  "preflight_passed_before_training": true,
+  "learned_candidate_fits": 192,
+  "constant_fits": 4,
+  "preferred_arm": "both_resources",
+  "selection_policy": "fixed_rbw_main_v2",
+  "selection": "Main resource models: fixed RBW inputs in all four tracks; select algorithm/parameters by validation event log loss within RBW. Retain all five comparison arms. Cross-group winners are display-only and never replace the main registry. Exact ties: constant, LR, RF, HGB, XGBoost, then candidate index and arm order. No test selection.",
+  "constant": "training-event outcome prevalence per gender/innings; not Naive Bayes",
+  "histories": "prior-date rolling histories shared across arms; not frozen at train boundary",
+  "interpretation": "Exploratory validation comparisons, not final evidence of improvement or calibration.",
+  "limitations": [
+    "Conservative resource-ready cohort; review matches excluded identically from all arms.",
+    "Previously inspected historical matches are not a new untouched confirmatory test set.",
+    "Separate innings models share a target but need not be continuous across the innings break.",
+    "Within-family comparisons tune each arm; not a pure fixed-hyperparameter feature effect.",
+    "No post-hoc calibration fitted. Log loss/Brier improvements are not pure calibration improvements."
+  ]
+}

@@ -1,0 +1,7 @@
+reason,blocks_resources,matches,records
+bowling_return_penalty_time_unverified,True,2,2
+match_replacement_restrictions_unverified,True,11,11
+observed_over_continuation,False,8,9
+retirement_return_conditions_unverified,True,26,26
+role_replacement_restrictions_unverified,True,61,62
+untimed_absent_hurt,True,17,17
